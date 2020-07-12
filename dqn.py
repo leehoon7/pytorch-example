@@ -50,6 +50,12 @@ class DQNAgent(nn.Module):
         return len(self.replay_memory) >= self.batch_size
 
     def train(self):
+
+        """
+        implement training code based on DQN pseudocode.
+        return: loss during training
+        """
+
         return 0
 
 
