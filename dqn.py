@@ -20,7 +20,13 @@ class ReplayMemory:
 
     def get_sample(self, size):
         batch = random.sample(self.memory, size)
-        print(batch)
+
+        """
+        implement preprocessing
+        return : state, reward, action, state', done 
+        """
+
+        return batch
 
 
 class DQNAgent(nn.Module):
@@ -53,6 +59,7 @@ class DQNAgent(nn.Module):
 
         """
         implement training code based on DQN pseudocode.
+        hint: you can get batch for training with 'get sample' method
         return: loss during training
         """
 
